@@ -1,29 +1,39 @@
-<p id="notice"><%= notice %></p>
+<p class="text-xl text-green-700 pl-6 pt-6"><%= notice %></p>
 
-<h1>Users</h1>
+<h1 class="text-xl font-semibold text-blue-500 underline pl-6 pt-6">
+  Users
+</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
+<div class="pl-6 pr-6 pt-6">
+  <table class ="table-fixed border-collapse">
+    <thead>
       <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th class="w-56 border border-blue-500">Name</th>
+        <th class="w-56 border border-blue-500">Email</th>
+        <th class="w-56 border border-blue-500" colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td class="w-56 border border-blue-500"><%= user.name %></td>
+          <td class="w-56 border border-blue-500"><%= user.email %></td>
+          <td class="w-56 border border-blue-500" colspan="3">
+            <div class="pl-1">
+              <%= link_to 'Show', user, class: "btn-mini" %>
+              <%= link_to 'Edit', edit_user_path(user), class: "btn-mini" %>
+              <%= link_to 'Destroy', user, class: "btn-mini", method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<div class="pl-6 pt-6">
+  <%= link_to 'New User', new_user_path, class: "btn-blue"%>
+</div>

@@ -1,6 +1,10 @@
-<h1>Editing Micropost</h1>
+<h1 class="text-xl font-semibold text-blue-500 underline pl-6 pt-6">
+  Editing Micropost
+</h1>
 
 <%= render 'form', micropost: @micropost %>
 
-<%= link_to 'Show', @micropost %> |
-<%= link_to 'Back', microposts_path %>
+<div class="pl-6 pt-6">
+  <%= link_to 'Show', @micropost, class: "btn-blue" %>
+  <%= link_to 'Back', microposts_path, class: "btn-blue" %>
+</div>

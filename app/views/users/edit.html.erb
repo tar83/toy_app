@@ -1,6 +1,10 @@
-<h1>Editing User</h1>
+<h1 class="text-xl font-semibold text-blue-500 underline pl-6 pt-6">
+  Editing User
+</h1>
 
 <%= render 'form', user: @user %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<div class="pl-6 pt-6">
+  <%= link_to 'Show', @user, class: "btn-blue" %>
+  <%= link_to 'Back', users_path, class: "btn-blue" %>
+</div>
