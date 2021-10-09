@@ -20,7 +20,7 @@
     First Micropost:
     </strong>
     <%= if @user.microposts.present?
-          @user.microposts.fists.content
+          @user.microposts.first.content
         end %>
   </p>
 </div>
